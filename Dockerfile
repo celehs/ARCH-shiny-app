@@ -5,7 +5,6 @@ RUN apt-get install -y libglpk-dev
 RUN apt-get install -y libgmp3-dev
 RUN apt-get install -y libxml2-dev
 
-RUN R -e "install.packages('colourpicker')"
 RUN R -e "install.packages('data.table')"
 RUN R -e "install.packages('DBI')"
 RUN R -e "install.packages('dplyr')"
@@ -23,8 +22,7 @@ RUN R -e "install.packages('shinyWidgets')"
 RUN R -e "install.packages('stringr')"
 RUN R -e "install.packages('plotly')"
 RUN R -e "install.packages('reactable')"
-# RUN R -e "install.packages('readr')"
+RUN R -e "install.packages('readr')"
 # RUN R -e "install.packages('reshape2')"
 RUN R -e "install.packages('rintrojs')"
 RUN R -e "install.packages('RPostgres')"
-RUN R -e "install.packages('visNetwork')"

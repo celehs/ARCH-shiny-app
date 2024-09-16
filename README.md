@@ -1,8 +1,14 @@
 # ARCH shiny app
 
-## config
+## settings
+
+### Parameter settings
 
 Adjust parameters in the `config.yaml`
+
+### Documentation
+
+The documentation files are in `doc/`.
 
 ## Build docker image
 Please use `cd` to change to the `ARCH` directory in terminal before building.
