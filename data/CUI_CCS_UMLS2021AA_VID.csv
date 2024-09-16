@@ -1,0 +1,357 @@
+CUI,CUI_STR,CCS,CCS_STR
+C0001632,Adrenalectomy,ENP004,Adrenalectomy
+C0002627,Amniocentesis,138,Diagnostic amniocentesis
+C0002692,Amputation of leg through tibia and fibula,MST024,Below knee amputation
+C0002911,"Anesthesia, Conduction",ADM014,Regional anesthesia
+C0003515,Aortography,189,Contrast aortogram
+C0003611,Appendectomy,80,Appendectomy
+C0003611,Appendectomy,GIS008,Appendectomy
+C0003904,Arthroscopy,149,Arthroscopy
+C0005841,Blood Transfusion,222,Blood transfusion
+C0005954,Bone marrow biopsy,65,Bone marrow biopsy
+C0005954,Bone marrow biopsy,LYM007,Bone marrow biopsy
+C0005961,Bone Marrow Transplantation,64,Bone marrow transplant
+C0006098,Brachytherapy,RAD002,Brachytherapy
+C0007767,Cerebral Angiography,188,Cerebral arteriogram
+C0007812,Cerebrospinal fluid shunts procedure,CNS010,Cerebrospinal fluid shunt procedures
+C0007876,Cesarean section,134,Cesarean section
+C0007876,Cesarean section,PGN003,Cesarean section
+C0008320,Cholecystectomy procedure,HEP006,Cholecystectomy
+C0008321,Cholecystectomy with exploration of common duct (procedure),84,Cholecystectomy and common duct exploration
+C0008819,Male Circumcision,115,Circumcision
+C0008819,Male Circumcision,MRS001,Circumcision
+C0009274,Colectomy,GIS009,Colectomy
+C0010042,Keratoplasty,13,Corneal transplant
+C0010055,Coronary Artery Bypass Surgery,44,Coronary artery bypass graft (CABG)
+C0010055,Coronary Artery Bypass Surgery,CAR003,Coronary artery bypass grafts (CABG)
+C0011331,Dental Procedures,29,Dental procedures
+C0011331,Dental Procedures,ENT015,Dental procedures
+C0011931,Ultrasonography of head and neck,192,Diagnostic ultrasound of head and neck
+C0013778,Electric Countershock,225,Conversion of cardiac rhythm
+C0013778,Electric Countershock,ESA006,Cardioversion
+C0013798,Electrocardiogram,202,Electrocardiogram
+C0013806,Electroconvulsive Therapy,MHT003,Electroconvulsive therapy
+C0013819,Electroencephalography,199,Electroencephalogram (EEG)
+C0013819,Electroencephalography,MAM011,Electroencephalogram (EEG)
+C0014586,Episiotomy,133,Episiotomy
+C0014586,Episiotomy,PGN005,Episiotomy
+C0015357,Extracorporeal Membrane Oxygenation,ESA002,Extracorporeal membrane oxygenation
+C0015945,Fetal Monitoring,139,Fetal monitoring
+C0017118,Gastrectomy,GIS010,Gastrectomy
+C0017196,Gastrostomy,GIS017,Gastrostomy
+C0017673,Glossectomy,ENT009,Tongue excision
+C0018823,Heart Transplantation,CAR018,Heart transplant
+C0019004,Hemodialysis,58,Hemodialysis
+C0019004,Hemodialysis,ESA001,Hemodialysis
+C0020431,Hyperbaric oxygenation therapy,ESA011,Hyperbaric oxygen therapy
+C0020674,"Hypothermia, Induced",EST004,Hypothermia therapy
+C0020699,Hysterectomy,FRS001,Hysterectomy
+C0022671,Kidney Transplantation,105,Kidney transplant
+C0022671,Kidney Transplantation,URN011,Kidney transplant
+C0023065,Laryngectomy,ENT011,Laryngectomy
+C0023911,Transplantation of liver,HEP011,Liver transplant
+C0024119,Pulmonary function tests,MAM014,Pulmonary function tests
+C0024128,Lung Transplantation,RES013,Lung transplant
+C0024485,Magnetic Resonance Imaging,198,Magnetic resonance imaging
+C0024485,Magnetic Resonance Imaging,IMG005,Magnetic resonance imaging (MRI)
+C0024671,Mammography,182,Mammography
+C0024881,Mastectomy,167,Mastectomy
+C0026995,Myelography,181,Myelogram
+C0029728,Other respiratory therapy,217,Other respiratory therapy
+C0029936,Ovariectomy,FRS002,Oophorectomy
+C0030275,Pancreas Transplantation,HEP012,Pancreas transplant
+C0030279,Pancreatectomy,HEP005,Pancreatectomy
+C0031139,Peritoneal Dialysis,91,Peritoneal dialysis
+C0031139,Peritoneal Dialysis,ADM013,Peritoneal dialysis
+C0031150,Laparoscopy,87,Laparoscopy (GI only)
+C0031765,Phototherapy,EST002,Phototherapy
+C0033573,Prostatectomy,MRS003,Prostatectomy
+C0034115,Paracentesis,GIS006,Paracentesis
+C0035467,rhinoplasty,28,Plastic procedures on nose
+C0037297,Skin Transplantation,172,Skin graft
+C0037297,Skin Transplantation,SKB007,Skin graft
+C0037831,Speech Therapy,RHB004,Speech therapy treatment
+C0037935,Spinal fusion (procedure),158,Spinal fusion
+C0037943,Spinal Puncture,CNS002,Lumbar puncture
+C0037995,Splenectomy,LYM005,Splenectomy
+C0040071,Thymectomy,LYM004,Thymectomy
+C0040145,Thyroidectomy,ENP002,Thyroidectomy
+C0040590,Tracheostomy procedure,RES010,Tracheostomy
+C0040771,Transurethral Resection of Prostate,113,Transurethral resection of prostate (TURP)
+C0041271,Salpingectomy,FRS003,Salpingectomy
+C0041447,Tympanoplasty,22,Tympanoplasty
+C0041618,Ultrasonography,IMG008,Ultrasonography
+C0041626,Ultraviolet Therapy,EST003,Ultraviolet light therapy
+C0041953,"Catheterization, Ureteral",102,Ureteral catheterization
+C0042196,Vaccination,ADM010,Vaccinations
+C0079103,Cervical dilatation (function),FRS008,Cervical dilation
+C0079989,Parathyroidectomy,ENP003,Parathyroidectomy
+C0085076,Mammaplasty,SKB004,Breast reconstruction
+C0085198,Esophagectomy,GIS014,Esophagectomy
+C0085704,Exploratory laparotomy,89,Exploratory laparotomy
+C0085704,Exploratory laparotomy,GIS005,Exploration of peritoneal cavity
+C0086511,Knee Replacement Arthroplasty (procedure),152,Arthroplasty knee
+C0086511,Knee Replacement Arthroplasty (procedure),MST006,Knee arthroplasty
+C0087123,Tympanostomy,23,Myringotomy
+C0087123,Tympanostomy,ENT005,Myringotomy
+C0150411,Analysis of arterial blood gases and pH,205,Arterial blood gases
+C0150496,Cardiac monitoring,MAM008,Cardiac monitoring
+C0161937,"Forceps, vacuum, and breech delivery",135,Forceps; vacuum; and breech delivery
+C0161965,Ophthalmologic and otologic diagnosis and treatment,220,Ophthalmologic and otologic diagnosis and treatment
+C0175608,Other operations on ovary,120,Other operations on ovary
+C0175610,Other operations on fallopian tubes,123,Other operations on fallopian tubes
+C0176260,Destruction of lesion of retina and choroid,17,Destruction of lesion of retina and choroid
+C0176786,Other bowel diagnostic procedures,92,Other bowel diagnostic procedures
+C0176866,Hemorrhoid operation,81,Hemorrhoid procedures
+C0176967,Other hernia repair,86,Other hernia repair
+C0176984,Nephrotomy and nephrostomy,103,Nephrotomy and nephrostomy
+C0177049,Insertion of indwelling urinary catheter,108,Indwelling catheter
+C0177279,Other procedures to assist delivery,137,Other procedures to assist delivery
+C0177507,"Division of joint capsule, ligament, or cartilage",150,Division of joint capsule; ligament or cartilage
+C0177695,Other diagnostic procedures on skin and subcutaneous tissue,173,Other diagnostic procedures on skin and subcutaneous tissue
+C0177703,Suture of skin and subcutaneous tissue,171,Suture of skin and subcutaneous tissue
+C0177779,Other CT scan,180,Other CT scan
+C0177800,Other diagnostic ultrasound,197,Other diagnostic ultrasound
+C0177994,Radioisotope scan and function study,209,Radioisotope scan and function studies
+C0177999,Other radioisotope scan,210,Other radioisotope scan
+C0178073,drug and alcohol detoxification and rehabilitation,219,Alcohol and drug rehabilitation/detoxification
+C0185210,Partial ostectomy,142,Partial excision bone
+C0186193,Repair of hip,MST007,Hip arthroplasty
+C0187901,Meniscectomy,151,Excision of semilunar cartilage of knee
+C0188972,Epistaxis control,27,Control of epistaxis
+C0189661,Repair of aneurysm,CAR011,Aneurysm repair procedures
+C0189784,Biopsy of heart,CAR001,Heart biopsy
+C0190065,Operation on heart valve,43,Heart valve procedures
+C0190961,Peripheral arterial bypass,CAR014,Peripheral arterial bypass procedures
+C0191283,Incision and drainage of skin,SKB002,Incision and drainage of skin
+C0191322,Excision of lesion of skin,170,Excision of skin lesion
+C0192601,Small intestine excision,75,Small bowel resection
+C0192601,Small intestine excision,GIS011,Small bowel resection
+C0192674,Upper gastrointestinal endoscopy with biopsy,70,Upper gastrointestinal endoscopy; biopsy
+C0192866,Sigmoid colectomy,78,Colorectal resection
+C0193311,Excision of salivary gland,ENT010,Salivary gland excision
+C0193388,Biopsy of liver (procedure),83,Biopsy of liver
+C0193388,Biopsy of liver (procedure),HEP001,Liver biopsy
+C0193842,Biopsy of lymph node,LYM001,Lymph node biopsy
+C0193959,Tonsillectomy and adenoidectomy,ENT007,Tonsilectomy and adenoidectomy
+C0194034,Transplantation of spleen,LYM010,Spleen transplant
+C0195331,Cervicectomy,FRS004,Trachelectomy
+C0195632,Surgical treatment of ectopic pregnancy; abdominal pregnancy,122,Removal of ectopic pregnancy
+C0195632,Surgical treatment of ectopic pregnancy; abdominal pregnancy,PGN007,Removal of ectopic pregnancy
+C0195681,Cervical Cerclage,FRS009,Cervical cerclage
+C0196573,Decompression of peripheral nerve,6,Decompression peripheral nerve
+C0196775,Neuroplasty,PNS004,Nerve repair
+C0196950,Procedure on eye,EYP001,Eye procedures
+C0198154,Mastoidectomy,24,Mastoidectomy
+C0198457,Repair of diaphragmatic hernia,RES011,Diaphragmatic hernia repair
+C0198497,Abdominal paracentesis,88,Abdominal paracentesis
+C0199470,Mechanical ventilation,ESA003,Mechanical ventilation
+C0199551,Cardiac electrophysiologic stimulation and recording study,MAM009,Electrophysiologic studies
+C0199629,Pulmonary artery pressure monitoring,MAM003,Pulmonary arterial pressure monitoring
+C0199640,Cardiac pacing,ESA007,Cardiac pacing
+C0199779,Administration of antibiotic,ADM015,Administration of antibiotics
+C0199967,Transfusion of coagulation factors,ADM004,Transfusion of clotting factors
+C0202784,Routine chest X-ray,183,Routine chest X-ray
+C0202823,Chest CT,178,CT scan chest
+C0203083,Intraoperative cholangiogram,184,Intraoperative cholangiogram
+C0203108,Intravenous pyelogram (procedure),187,Intravenous pyelogram
+C0203407,Ultrasonography of urinary system,195,Diagnostic ultrasound of urinary tract
+C0203474,Diagnostic ultrasound of abdomen and retroperitoneum,196,Diagnostic ultrasound of abdomen or retroperitoneum
+C0203668,Radioisotope scan of bone,207,Radioisotope bone scan
+C0203886,Diagnostic physical therapy procedure,212,Diagnostic physical therapy
+C0204727,Isolation procedure,OTR004,Isolation procedures
+C0204854,Arthrocentesis,155,Arthrocentesis
+C0204854,Arthrocentesis,MST001,Arthrocentesis
+C0242382,Lymph Node Dissection,LYM003,Lymph node dissection
+C0278347,Transfusion of plasma,ADM002,Transfusion of plasma
+C0302269,Excision of bone,MST018,Bone excision
+C0332126,No treatment required for,.,No procedure
+C0337308,Amputation of lower limb,157,Amputation of lower extremity
+C0341616,Open prostatectomy,114,Open prostatectomy
+C0392535,Induced abortion (procedure),126,Abortion (termination of pregnancy)
+C0392535,Induced abortion (procedure),PGN008,Abortion
+C0392835,Stripping of lower limb varicose veins,53,Varicose vein stripping; lower limb
+C0392920,Chemotherapy Regimen,224,Cancer chemotherapy
+C0393107,Other therapeutic procedure,231,Other therapeutic procedures
+C0395504,Lens and cataract procedures,15,Lens and cataract procedures
+C0396432,Diagnostic endoscopic examination of larynx,ENT001,Laryngoscopy (diagnostic)
+C0408670,Decompression of spinal cord,CNS008,Spinal cord decompression
+C0412620,CT of abdomen,179,CT scan abdomen
+C0412755,Other diagnostic radiology and related techniques,226,Other diagnostic radiology and related techniques
+C0419203,Osteopathic procedures,OST001,Osteopathic treatment
+C0430876,Fluorescence Imaging,IMG010,Fluorescence imaging
+C0442965,Cosmetic procedure,GNR001,Cosmetic procedures
+C0473988,Intravenous induction of labor,ADM007,Intravenous induction of labor
+C0520483,Tubal Ligation,121,Ligation or occlusion of fallopian tubes
+C0553794,Diagnostic lumbar puncture,4,Diagnostic spinal tap
+C0559465,Fetal heart monitoring,PGN001,Fetal heart rate monitoring
+C0581628,Ultrasonography of digestive system,194,Diagnostic ultrasound of gastrointestinal tract
+C0585632,Diagnostic bronchoscopy,RES001,Bronchoscopy (diagnostic)
+C0600454,Cervical Ripening,ADM008,Cervical ripening
+C0600577,Chiropractic manipulation,CHP001,Chiropractic manipulation
+C0740287,Esophageal dilatation operation,69,Esophageal dilatation
+C0810093,Incision and excision of CNS,1,Incision and excision of CNS
+C0810094,Insertion; replacement; or removal of extracranial ventricular shunt,2,Insertion; replacement; or removal of extracranial ventricular shunt
+C0810095,Laminectomy; excision intervertebral disc,3,Laminectomy; excision intervertebral disc
+C0810096,Insertion of catheter or spinal stimulator and injection into spinal canal,5,Insertion of catheter or spinal stimulator and injection into spinal canal
+C0810098,Other non-OR or closed therapeutic nervous system procedures,8,Other non-OR or closed therapeutic nervous system procedures
+C0810099,Other OR therapeutic nervous system procedures,9,Other OR therapeutic nervous system procedures
+C0810100,Thyroidectomy; partial or complete,10,Thyroidectomy; partial or complete
+C0810101,Diagnostic endocrine procedures,11,Diagnostic endocrine procedures
+C0810102,Other therapeutic endocrine procedures,12,Other therapeutic endocrine procedures
+C0810103,Glaucoma procedures,14,Glaucoma procedures
+C0810105,Repair of retinal tear; detachment,16,Repair of retinal tear; detachment
+C0810106,Other therapeutic procedures on eyelids; conjunctiva; cornea,19,Other therapeutic procedures on eyelids; conjunctiva; cornea
+C0810107,Other intraocular therapeutic procedures,20,Other intraocular therapeutic procedures
+C0810108,Other extraocular muscle and orbit therapeutic procedures,21,Other extraocular muscle and orbit therapeutic procedures
+C0810109,Diagnostic procedure on ear,25,Diagnostic procedures on ear
+C0810110,Other therapeutic ear procedures,26,Other therapeutic ear procedures
+C0810112,Tonsillectomy and/or adenoidectomy,30,Tonsillectomy and/or adenoidectomy
+C0810113,Diagnostic procedures on nose; mouth and pharynx,31,Diagnostic procedures on nose; mouth and pharynx
+C0810114,Other non-OR therapeutic procedures on nose; mouth and pharynx,32,Other non-OR therapeutic procedures on nose; mouth and pharynx
+C0810115,Other OR therapeutic procedures on nose; mouth and pharynx,33,Other OR therapeutic procedures on nose; mouth and pharynx
+C0810116,Tracheostomy; temporary and permanent,34,Tracheostomy; temporary and permanent
+C0810117,Tracheoscopy and laryngoscopy with biopsy,35,Tracheoscopy and laryngoscopy with biopsy
+C0810118,Lobectomy or pneumonectomy,36,Lobectomy or pneumonectomy
+C0810119,Diagnostic bronchoscopy and biopsy of bronchus,37,Diagnostic bronchoscopy and biopsy of bronchus
+C0810120,Other diagnostic procedures on lung and bronchus,38,Other diagnostic procedures on lung and bronchus
+C0810121,Incision of pleura; thoracentesis; chest drainage,39,Incision of pleura; thoracentesis; chest drainage
+C0810122,Other diagnostic procedures of respiratory tract and mediastinum,40,Other diagnostic procedures of respiratory tract and mediastinum
+C0810123,Other non-OR therapeutic procedures on respiratory system,41,Other non-OR therapeutic procedures on respiratory system
+C0810124,Other OR therapeutic procedures on respiratory system,42,Other OR Rx procedures on respiratory system and mediastinum
+C0810126,coronary thrombolysis,46,Coronary thrombolysis
+C0810127,Diagnostic cardiac catheterization; coronary arteriography,47,Diagnostic cardiac catheterization; coronary arteriography
+C0810128,Insertion; revision; replacement; removal of cardiac pacemaker or cardioverter/defibrillator,48,Insertion; revision; replacement; removal of cardiac pacemaker or cardioverter/defibrillator
+C0810129,Other OR heart procedures,49,Other OR heart procedures
+C0810130,Extracorporeal circulation auxiliary to open heart procedures,50,Extracorporeal circulation auxiliary to open heart procedures
+C0810131,Endarterectomy; vessel of head and neck,51,Endarterectomy; vessel of head and neck
+C0810132,Aortic resection; replacement or anastomosis,52,Aortic resection; replacement or anastomosis
+C0810133,Other vascular catheterization; not heart,54,Other vascular catheterization; not heart
+C0810134,peripheral vascular bypass,55,Peripheral vascular bypass
+C0810135,Other vascular bypass and shunt; not heart,56,Other vascular bypass and shunt; not heart
+C0810136,Creation; revision and removal of arteriovenous fistula or vessel-to-vessel cannula for dialysis,57,Creation; revision and removal of arteriovenous fistula or vessel-to-vessel cannula for dialysis
+C0810137,Other OR procedures on vessels of head and neck,59,Other OR procedures on vessels of head and neck
+C0810138,Embolectomy and endarterectomy of lower limbs,60,Embolectomy and endarterectomy of lower limbs
+C0810139,Other OR procedures on vessels other than head and neck,61,Other OR procedures on vessels other than head and neck
+C0810140,Other diagnostic cardiovascular procedures,62,Other diagnostic cardiovascular procedures
+C0810141,Other non-OR therapeutic cardiovascular procedures,63,Other non-OR therapeutic cardiovascular procedures
+C0810143,Other therapeutic procedures; hemic and lymphatic system,67,Other therapeutic procedures; hemic and lymphatic system
+C0810144,Injection or ligation of esophageal varices,68,Injection or ligation of esophageal varices
+C0810146,Gastrostomy; temporary and permanent,71,Gastrostomy; temporary and permanent
+C0810147,Colostomy; temporary and permanent,72,Colostomy; temporary and permanent
+C0810148,Ileostomy and other enterostomy,73,Ileostomy and other enterostomy
+C0810149,Gastrectomy; partial and total,74,Gastrectomy; partial and total
+C0810150,Colonoscopy and Biopsy,76,Colonoscopy and biopsy
+C0810151,Proctoscopy and anorectal biopsy,77,Proctoscopy and anorectal biopsy
+C0810153,Local excision of large intestine lesion (not endoscopic),79,Local excision of large intestine lesion (not endoscopic)
+C0810154,Endoscopic retrograde cannulation of pancreas (ERCP),82,Endoscopic retrograde cannulation of pancreas (ERCP)
+C0810156,Excision; lysis peritoneal adhesions,90,Excision; lysis peritoneal adhesions
+C0810158,Other non-OR upper GI therapeutic procedures,93,Other non-OR upper GI therapeutic procedures
+C0810159,Other OR upper GI therapeutic procedures,94,Other OR upper GI therapeutic procedures
+C0810160,Other non-OR lower GI therapeutic procedures,95,Other non-OR lower GI therapeutic procedures
+C0810161,Other OR lower GI therapeutic procedures,96,Other OR lower GI therapeutic procedures
+C0810163,Other non-OR gastrointestinal therapeutic procedures,98,Other non-OR gastrointestinal therapeutic procedures
+C0810164,Other OR gastrointestinal therapeutic procedures,99,Other OR gastrointestinal therapeutic procedures
+C0810165,Endoscopy and endoscopic biopsy of the urinary tract,100,Endoscopy and endoscopic biopsy of the urinary tract
+C0810166,Transurethral excision; drainage; or removal of urinary obstruction,101,Transurethral excision; drainage; or removal urinary obstruction
+C0810167,Nephrectomy; partial or complete,104,Nephrectomy; partial or complete
+C0810168,Genitourinary incontinence procedures,106,Genitourinary incontinence procedures
+C0810169,Extracorporeal lithotripsy; urinary,107,Extracorporeal lithotripsy; urinary
+C0810170,Procedures on Urethra,109,Procedures on the urethra
+C0810172,Other non-OR therapeutic procedures of urinary tract,111,Other non-OR therapeutic procedures of urinary tract
+C0810173,Other OR therapeutic procedures of urinary tract,112,Other OR therapeutic procedures of urinary tract
+C0810174,diagnostic procedure for the male genital system,116,Diagnostic procedures; male genital
+C0810175,Other non-OR therapeutic procedures; male genital,117,Other non-OR therapeutic procedures; male genital
+C0810176,Other OR therapeutic procedures; male genital,118,Other OR therapeutic procedures; male genital
+C0810177,Oophorectomy; unilateral and bilateral,119,Oophorectomy; unilateral and bilateral
+C0810179,abdominal and vaginal hysterectomy,124,Hysterectomy; abdominal and vaginal
+C0810180,Other excision of cervix and uterus,125,Other excision of cervix and uterus
+C0810181,Dilatation and curettage (D&C); aspiration after delivery or abortion,127,Dilatation and curettage (D&C); aspiration after delivery or abortion
+C0810182,Diagnostic dilatation and curettage (D&C),128,Diagnostic dilatation and curettage (D&C)
+C0810183,Repair of cystocele and rectocele; obliteration of vaginal vault,129,Repair of cystocele and rectocele; obliteration of vaginal vault
+C0810184,Other diagnostic procedures; female organs,130,Other diagnostic procedures; female organs
+C0810185,Other non-OR therapeutic procedures; female organs,131,Other non-OR therapeutic procedures; female organs
+C0810186,Other OR therapeutic procedures; female organs,132,Other OR therapeutic procedures; female organs
+C0810187,Artificial rupture of membranes to assist delivery,136,Artificial rupture of membranes to assist delivery
+C0810189,Repair of current obstetric laceration,140,Repair of current obstetric laceration
+C0810190,Other therapeutic obstetrical procedures,141,Other therapeutic obstetrical procedures
+C0810192,Bunionectomy or repair of toe deformities,143,Bunionectomy or repair of toe deformities
+C0810193,Treatment; facial fracture or dislocation,144,Treatment; facial fracture or dislocation
+C0810194,Treatment; fracture or dislocation of radius and ulna,145,Treatment; fracture or dislocation of radius and ulna
+C0810195,Treatment; fracture or dislocation of hip and femur,146,Treatment; fracture or dislocation of hip and femur
+C0810196,Treatment; fracture or dislocation of lower extremity (other than hip or femur),147,Treatment; fracture or dislocation of lower extremity (other than hip or femur)
+C0810197,Other fracture and dislocation procedure,148,Other fracture and dislocation procedure
+C0810198,Hip replacement; total and partial,153,Hip replacement; total and partial
+C0810199,Arthroplasty other than hip or knee,154,Arthroplasty other than hip or knee
+C0810200,Injections and aspirations of muscles; tendons; bursa; joints and soft tissue,156,Injections and aspirations of muscles; tendons; bursa; joints and soft tissue
+C0810201,Other diagnostic procedures on musculoskeletal system,159,Other diagnostic procedures on musculoskeletal system
+C0810202,Other therapeutic procedures on muscles and tendons,160,Other therapeutic procedures on muscles and tendons
+C0810203,Other OR therapeutic procedures on bone,161,Other OR therapeutic procedures on bone
+C0810204,Other OR therapeutic procedures on joints,162,Other OR therapeutic procedures on joints
+C0810205,Other non-OR therapeutic procedures on musculoskeletal system,163,Other non-OR therapeutic procedures on musculoskeletal system
+C0810206,Other OR therapeutic procedures on musculoskeletal system,164,Other OR therapeutic procedures on musculoskeletal system
+C0810207,Breast biopsy and other diagnostic procedures on breast,165,Breast biopsy and other diagnostic procedures on breast
+C0810208,Lumpectomy; quadrantectomy of breast,166,Lumpectomy; quadrantectomy of breast
+C0810209,Incision and drainage of skin and subcutaneous tissue,168,Incision and drainage; skin and subcutaneous tissue
+C0810210,Debridement of wound; infection or burn,169,Debridement of wound; infection or burn
+C0810211,Other non-OR therapeutic procedures on skin and breast,174,Other non-OR therapeutic procedures on skin and breast
+C0810212,Other OR therapeutic procedures on skin and breast,175,Other OR therapeutic procedures on skin and breast
+C0810213,Other organ transplantation,176,Other organ transplantation
+C0810214,Computerized axial tomography (CT) scan head,177,Computerized axial tomography (CT) scan head
+C0810215,X-ray of upper GI tract,185,Upper gastrointestinal X-ray
+C0810216,X-ray of lower GI tract,186,Lower gastrointestinal X-ray
+C0810217,Contrast arteriogram of femoral and lower extremity arteries,190,Contrast arteriogram of femoral and lower extremity arteries
+C0810218,Arterio or venogram (not heart and head),191,Arterio- or venogram (not heart and head)
+C0810219,Diagnostic ultrasound of heart (echocardiogram),193,Diagnostic ultrasound of heart (echocardiogram)
+C0810220,Nonoperative urinary system measurements,200,Nonoperative urinary system measurements
+C0810221,Electrographic cardiac monitoring,203,Electrographic cardiac monitoring
+C0810222,Swan-Ganz catheterization for monitoring,204,Swan-Ganz catheterization for monitoring
+C0810223,Microscopic examination (bacterial smear; culture; toxicology),206,Microscopic examination (bacterial smear; culture; toxicology)
+C0810224,Radioisotope pulmonary scan,208,Radioisotope pulmonary scan
+C0810225,Physical therapy exercises; manipulation; and other procedures,213,Physical therapy exercises; manipulation; and other procedures
+C0810226,Traction; splints; and other wound care,214,Traction; splints; and other wound care
+C0810227,Other physical therapy and rehabilitation,215,Other physical therapy and rehabilitation
+C0810228,Respiratory intubation and mechanical ventilation,216,Respiratory intubation and mechanical ventilation
+C0810229,Psychological and psychiatric evaluation and therapy,218,Psychological and psychiatric evaluation and therapy
+C0810231,enteral and parenteral nutrition,223,Enteral and parenteral nutrition
+C0810232,Other diagnostic procedures (interview; evaluation; consultation),227,Other diagnostic procedures (interview; evaluation; consultation)
+C0810233,Prophylactic vaccinations and inoculations,228,Prophylactic vaccinations and inoculations
+C0810235,Extracorporeal shock wave lithotripsy; other than urinary,230,Extracorporeal shock wave lithotripsy; other than urinary
+C0810405,Esophagogastroduodenoscopy (EGD) with biopsy,GIS001,Esophagogastroduodenoscopy (EGD) with biopsy
+C0812428,Nasogastric tube procedures,221,Nasogastric tube
+C0812450,Intrauterine coil insertion,FRS012,Intrauterine device (IUD) insertion
+C0843886,Diagnostic thoracentesis,RES003,Thoracentesis (diagnostic)
+C0847122,"Other diagnostic procedure, DIGESTIVE",97,Other gastrointestinal diagnostic procedures
+C0847448,"Other diagnostic procedure, NEUROLOGICAL",7,Other diagnostic nervous system procedures
+C0847752,"Other diagnostic procedure, URINARY SYSTEM",110,Other diagnostic procedures of urinary tract
+C0849142,electrocardiogram (ECG),MAM007,Electrocardiogram (ECG)
+C0869677,Procedures on Spleen,66,Procedures on spleen
+C0869683,Nasal and sinus excision,ENT008,Nasal and sinus excision
+C0876943,Nonoperative removal of foreign body,229,Nonoperative removal of foreign body
+C0948924,Meningeal repair,CNS011,Meninges repair
+C1288254,Procedure on nail,SKB009,Nail procedures
+C1292880,Procedure on male perineum,MRS005,Male perineum procedures
+C1293043,Procedure on eyelid,EYP002,Eyelid procedures
+C1306645,Plain x-ray,IMG009,Plain radiography
+C1384485,Normal delivery,PGN002,Spontaneous vaginal delivery
+C1384495,Cardiovascular stress testing,201,Cardiac stress tests
+C1384495,Cardiovascular stress testing,MAM004,Cardiac stress tests
+C1456003,Infusion of vasopressor agent,ADM006,Infusion of vasopressor
+C1522449,Therapeutic radiology procedure,211,Therapeutic radiology for cancer treatment
+C1532338,Percutaneous Coronary Intervention,CAR004,Percutaneous coronary interventions (PCI)
+C1541966,Invalid procedure,.A,Invalid procedure
+C1561607,Overall,.Z,Overall
+C1883289,Therapeutic Bronchoscopy,RES004,Bronchoscopy (therapeutic)
+C1955925,Facial Transplantation,ENT016,Face transplant
+C1960375,Diagnostic audiology,ENT004,Diagnostic audiology
+C1970975,Inguinal and femoral hernia repair,85,Inguinal and femoral hernia repair
+C1970975,Inguinal and femoral hernia repair,GNR003,Inguinal and femoral hernia repair
+C2066243,frenectomy of vestibule of mouth,ENT014,Frenectomy
+C2349254,Robotic assisted procedures,OTR001,Robotic-assisted procedures
+C2349740,Non-Invasive Mechanical Ventilation,ESA004,Non-invasive ventilation
+C2551357,Crisis intervention for mental health,MHT004,Crisis intervention for mental health
+C2580554,Subcutaneous tissue and fascia excision,MST020,Subcutaneous tissue and fascia excision
+C2717817,Decompressive Craniectomy,CNS009,Decompressive craniectomy
+C2825568,Vaginal Assisted Delivery,PGN004,Assisted vaginal delivery
+C2936173,Percutaneous Transluminal Coronary Angioplasty,45,Percutaneous transluminal coronary angioplasty (PTCA)
+C2937355,Diagnostic procedure on eye proper,18,Diagnostic procedures on eye

@@ -1,0 +1,14 @@
+step	element	intro	position	title
+1	NA	Welcome to the ARCH app.	right	Welcome!
+2	#side-searchbox2	<b>Step 1:  </b> Enter some tearms to search for. e.g. rheumatoid arthritis.	right	Search box
+3	#side-tbInput	<b>Step 2:  </b> Click to select 1 row in the search results.	right	Input table
+4	#side-check_nodes	<b>Step 3:  </b> Screening selected row for NLP/Codififed nodes.	right	Candidate nodes
+5	#buttons	<b>Step 4:  </b> Submit your selection to the server and show.<br><b>Unselect:  </b>Press this button to clear your selection.	right	Buttons
+6	#ui_filter	<b>Optional Step: </b> Filter nodes by cosine similarity or category.	right	Filter
+7	#node-info	Information for selected node.	left	Node info
+8	#ui_details	More details for selected node.	left	More details
+9	.tabbable	Click the tabs at the top of the main page to view the plots of the hierarchy, network and circular plots of the connected nodes for your selction. You can also view the details in table format by going to the table tab.	left	Main page
+10	.sidebar-toggle	Collapse/expand the sidebar.	bottom	Collapse sidebar
+11	#btn-downloadData	Download the data of the candidate nodes.	bottom	Download
+12	#btn-bookmark	Bookmark this application's state and get a URL for sharing.	bottom	Bookmark
+13	#btn-instruct	Overview of the App.	bottom	About

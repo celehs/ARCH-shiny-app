@@ -1,0 +1,13 @@
+,id,CCS_TERM,id_new,new_term
+47706,CCS:232,anesthesia,ProcedureCode:ab1,Anesthesia
+47707,CCS:233,laboratory - chemistry and hematology,ProcedureCode:ab2,Chemistry and Hematology Laboratory
+47708,CCS:234,pathology,ProcedureCode:ab3,Pathology
+47709,CCS:235,other laboratory,ProcedureCode:ab4,Other Laboratory
+47710,CCS:236,home health services,ProcedureCode:ab5,Home Healthcare Services
+47711,CCS:237,ancillary services,ProcedureCode:ab6,Support Services
+47712,CCS:239,"transportation - patient, provider, equipment",ProcedureCode:ab7,Transportation
+47714,CCS:240,"medications (injections, infusions and other forms)",ProcedureCode:ab8,Medications
+47715,CCS:241,visual aids and other optical supplies,ProcedureCode:ab9,Optical Equipments
+47716,CCS:242,hearing devices and audiology supplies,ProcedureCode:ab10,Hearing Equipments
+47717,CCS:243,dme and supplies,ProcedureCode:ab11,Durable Medical Equipments
+47718,CCS:244,gastric bypass and volume reduction,ProcedureCode:ab12,Gastric Bypass and Volume Reduction

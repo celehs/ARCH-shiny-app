@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rproj
+.Rprofile
+renv/
+cui-network.Rproj
+data-raw/
+v20220913/
+v20230119/
+v20230503/
