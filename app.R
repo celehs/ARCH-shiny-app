@@ -1,5 +1,4 @@
 
-library("colourpicker")
 library("data.table")
 library("DBI")
 library("dplyr")
@@ -21,7 +20,6 @@ library("reactable")
 # library("reshape2")
 library("rintrojs")
 library("RPostgres")
-library("visNetwork")
 
 library(yaml)
 data <- yaml.load_file("config.yaml")
@@ -70,9 +68,6 @@ body <- shinydashboard::dashboardBody(
               tabPanel(title = "Table of connected nodes",
                        uiOutput("clicked_node_table")
               ),
-              tabPanel(title = "Network",
-                       uiOutput("ui_network")),
-  
               tabPanel(title = "Circular plot (codified)",
                        br(),
                        uiOutput("circularplot_codify")
@@ -90,37 +85,11 @@ body <- shinydashboard::dashboardBody(
   )
 )
 
-# controlbar ====
-controlbar <- shinydashboardPlus::dashboardControlbar(
-  width = 450,
-  id = "controlbar",
-  skin = "light",
-  shinydashboardPlus::controlbarMenu(
-    id = "controlbarMenu",
-    selected = "Network",
-    # shinydashboardPlus::controlbarItem(
-    #   # "Threshold",
-    #   "Filter Nodes"#,
-    #   # uiOutput("ui_filter")
-    # ),
-    shinydashboardPlus::controlbarItem(
-      "Network",
-      checkboxInput("hide_labels", "Hide the labels", value = FALSE),
-      h4(tags$b("customize color")),
-      div(uiOutput("ui_color"), style="height: 450px; overflow-y: scroll;"),
-      h4(tags$b("customize shape")),
-      uiOutput("ui_shape")
-    )
-  )
-)
-
-
 
 ui <- shinydashboardPlus::dashboardPage(
   header,
   sidebar,
   body,
-  controlbar,
   title = NULL
 )
 
@@ -302,43 +271,6 @@ server <- function(input, output, session){
     df
   })
   
-  
-  ## network  ====================================
-  output$ui_network <- renderUI({
-    req(winsize()[2])
-    # req(input$filter_cos)
-    # req(input$filter_category)
-    if(length(center_node()) > 0 & (nrow(df_edges_cutted()) > 0)){
-      print("ui_network")
-      print(nrow(df_edges_cutted()))
-      print(center_node())
-      shinycssloaders::withSpinner(
-        visNetworkOutput("network",
-                         height =  paste0((winsize()[2]-100),"px")),
-        type = 6
-      )
-    } else {
-      h3("Try select some rows and click on submit")
-    }
-  })
-  
-  output$network <- renderVisNetwork({
-    print("********************network**************")
-    # myconfirmation = input$myconfirmation
-    print(center_node())
-    if(length(center_node()) > 0 | (isTruthy(df_edges_cutted()))){
-      req(picked_colors())
-      req(picked_shapes())
-      df <- df_edges_cutted()
-      plot_network(center_node(), df_edges_cutted(), 
-                   dict.combine, attrs, picked_colors(), picked_shapes(),
-                   hide_labels = FALSE, 
-                   directed = directed,
-                   node_num_cutoff = 500, 
-                   layout = "layout_nicely")
-    }
-  })
-  
   # node info ====
   
   # Clicked node text
@@ -505,7 +437,7 @@ server <- function(input, output, session){
           df <- getData(center_node(), tname, db, field = "id")
           # print(head(df))
           if(nrow(df) > 0){
-            outdiv <<- detailsTab(tname, df[df$id == center_node(),], title, outdiv, center_node(), output, sy, helps)
+            outdiv <<- detailsTab(tname, db, df[df$id == center_node(),], title, outdiv, center_node(), output, sy, helps)
           }
         })
         if (length(outdiv) > 0){
@@ -515,59 +447,7 @@ server <- function(input, output, session){
     }
     
   })
-  
-  # color picker  =================================
-  
-  output$ui_color <- renderUI({
-    n <- 1
-    colors_group <- NULL
-    print("ui_color")
-    print(ColorsNet$group)
-    print(unique(dict.combine$group))
-    lapply(sort(unique(dict.combine$group)), function(x){
-      if(!x %in% ColorsNet$group){
-        c <- sample(setdiff(colors, c(ColorsNet$color.background, colors_group$color.background)), 1)
-        colors_group <<- rbind(colors_group, data.frame("group"=x,
-                                                        "color.background"=c))
-      } else {
-        colors_group <<- rbind(colors_group, ColorsNet[ColorsNet$group == x,])
-      }
-      column(6, colorpickerUI(x, colors_group$color.background[colors_group$group == x]))
-    })
-  })
-  
-  picked_colors <- reactive({
-    updateControlbarMenu("controlbarMenu", selected = "Network")
-    c <- sapply(sort(unique(dict.combine$group)), colorpickerServer)
-    req(c[[1]])
-    print("picked_colors")
-    print(c)
-    data.frame("group" = names(c), "color.background" = c)
-  })
-  
-  # shape picker ====
-  output$ui_shape <- renderUI({
-    n <- 1
-    shape_group <- NULL
-    print("ui_shape")
-    types <- sort(unique(dict.combine$type))
-    print(types)
-    print(shapes)
-    lapply(1:length(types), function(x){
-      shape_group <<- rbind(shape_group, data.frame("type"=types[x],
-                                                    "shape"=shapes[x]))
-      column(6, shapepickerUI(types[x], shapes[x], shapes, shapes_icons))
-    })
-  })
-  
-  picked_shapes <- reactive({
-    updateControlbarMenu("controlbarMenu", selected = "Network")
-    c <- sapply(sort(unique(dict.combine$type)), shapepickerServer)
-    req(c[[1]])
-    print("picked_shapes")
-    print(c)
-    data.frame("type" = names(c), "shape" = c)
-  })
+
 }
 
 

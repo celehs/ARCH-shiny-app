@@ -27,7 +27,7 @@
 #' plot_network("df_edges", "dict.combine", "attrs", "colors_group")
 #' }
 #' @export
-detailsTab <- function(tname, df, title, outdiv, nodeid, output, has_sy, helps = "") {
+detailsTab <- function(tname, db, df, title, outdiv, nodeid, output, has_sy, helps = "") {
       
   height <- ifelse(nrow(df) > 10, 500, "auto")
   
@@ -55,7 +55,7 @@ detailsTab <- function(tname, df, title, outdiv, nodeid, output, has_sy, helps =
     details = function(index) {
       if(has_sy){
         cui <- df$cui[index]
-        sy <- getData(cui, "synonyms", "app_cuinetwork", field = "id")
+        sy <- getData(cui, "synonyms", db, field = "id")
         if(nrow(sy) > 0){
           htmltools::div(
             "Synonyms of ", df$cui[index], ":",
