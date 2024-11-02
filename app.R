@@ -155,7 +155,7 @@ server <- function(input, output, session){
   
   winsize <- windowSizeServer("win")
   
-  headerServer("btn", steps[, -1], "doc/documentation.md", df_edges_cutted())
+  headerServer("btn", steps[, -1], "doc/About.md", df_edges_cutted())
   
   directed = FALSE
   
