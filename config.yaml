@@ -1,13 +1,16 @@
 
 # url for ARCH home page
-url_home: "app.parse-health.org/ARCH/"
+url_home: app.parse-health.org/ARCH/
 
 # url for phecodemap
-url_phe: "https://celehs.connect.hms.harvard.edu/phecodemap/?phecode="
+url_phe: https://phenomics.va.ornl.gov/phecodemap/
+
+# (Optional) linkage csv file
+uqid_mapping: demo_uqid_mapping.csv
 
 # database
 db:
-    dbname: "app_cuinetwork"
+    dbname: app_cuinetwork
     host: celehs-db-instance.ctkwpvy5lvqg.us-east-1.rds.amazonaws.com
     port: 5432
     user: postgres

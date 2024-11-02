@@ -26,6 +26,7 @@ data <- yaml.load_file("config.yaml")
 print(data)
 url_home <- data$url_home
 url_phe <- data$url_phe
+uqid_mapping <- data$uqid_mapping
 db <- data$db
 
 sapply(dir("func", full.names = TRUE), source)
@@ -409,15 +410,25 @@ server <- function(input, output, session){
     )
   )
   
-  
+  href <- reactive({
+    req(center_node())
+    phe_id <- gsub(".+:", "", center_node(), perl = TRUE)
+    href <- paste0(url_phe, "?phecode=", phe_id)
+    if(!is.null(uqid_mapping)){
+      df_uqid <- read_csv(uqid_mapping)
+      uqid <- df_uqid$uqid[match(phe_id, df_uqid$id)]
+      if(isTruthy(uqid)){
+        href <- paste0(url_phe, "?uqid=", uqid)
+      }
+    }
+    href
+  })
   
   ## ui details  ===================================================
   output$ui_details <- renderUI({
     if(center_node() %in% phecode$Phecode){
-      phe_id <- gsub(".+:", "", center_node(), perl = TRUE)
-      href <- paste0(url_phe, phe_id)
       htmltools::div(tags$a(span(icon("hand-point-right"), "Phecode map to ICD"), 
-             href = href, target = "_blank", style = "color: darkblue"),
+             href = href(), target = "_blank", style = "color: darkblue"),
              style = 'box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
                       margin-top: 20px; padding:30px')
     } else {
