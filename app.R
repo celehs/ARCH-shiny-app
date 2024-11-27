@@ -162,7 +162,7 @@ server <- function(input, output, session){
   # center_node ====
   center_node <- sidebarServer("side", tb_input, tname = "dict", db, type = 2, 
                                # selected = c(2, 4, 8, 12),
-                               selected = c(4),
+                               selected = 2,
                                # init_nodes = c("C0003873", "C0409637", "PheCode:714.1", "PheCode:714.2"),
                                init_nodes = c("PheCode:714.1"),
                                server = TRUE)
