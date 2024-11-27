@@ -1,5 +1,8 @@
-load("~/Project/CUInetwork/v20230503/sysdata.rda")
-steps <- read_tsv("~/Project/CUInetwork/v20230503/doc/steps.tsv")
+load("~/Package/cui-network/data/sysdata.rda")
+
+steps <- read_tsv("~/Package/cui-network/doc/steps.tsv")
+steps <- steps[-c(4, 12), ]
+steps$intro[4] <- gsub("Step 4", "Step 3", steps$intro[4])
 
 ColorsNet = data.frame('group' = c("Disease_Codified", "Drug_Codified", "Lab_Codified", "Procedure_Codified",
                                    "ACTI", "LIVB",  "PHEN", "PHYS", "PROC", "CHEM", 
@@ -57,4 +60,4 @@ shapes_icons <- c("fa-circle",
   "fa-diamond")
 
 save(attrs,colors,ColorsCirc,ColorsNet,phecode,steps,shapes,shapes_icons,
-     file = "~/Project/CUInetwork/v20230503/sysdata.rda")
+     file = "~/Package/cui-network/data/sysdata.rda")

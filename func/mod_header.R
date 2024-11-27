@@ -20,7 +20,7 @@ headerUI <- function(id, url_home){
                  width = "100px",
                  style = "padding: 6px 20px 6px 20px;",
                  title = "Home page.", 
-                 onclick =paste0("window.open('https://app.parse-health.org/ARCH/', '_blank')")
+                 onclick =paste0("window.open(url_home, '_blank')")
     ),
     downloadButton(ns("downloadData"),
                    " Download",
@@ -29,10 +29,6 @@ headerUI <- function(id, url_home){
                    width = "100px",
                    style = "padding: 6px;",
                    title = "The cosine similarity of current network."
-    ),
-    bookmarkButton(
-      label = "Bookmark", id = ns("bookmark"),
-      class = "btn btn-primary header-button"
     ),
     actionButton(ns("instruct"), " About",
                  icon = icon("book"),
@@ -98,12 +94,6 @@ headerServer <- function(id, steps, doc, data) {
           readr::write_tsv(data, path)
         }
       )
-    
-    # bookmark ======================================
-    observeEvent(input$bookmark, {
-      print("bookmark")
-      session$doBookmark()
-    })
     
     observeEvent(input$instruct, {
         showModal(

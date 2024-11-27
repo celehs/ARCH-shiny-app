@@ -37,7 +37,7 @@ header <- shinydashboardPlus::dashboardHeader(
   # title = tags$p(img(src="www/parse-logo.png", width = "30px"), span("NLP & Codified Network")),
   title = tags$p(span("NLP & Codified Network")),
   leftUi = headerUI("btn", url_home),
-  titleWidth = "350px", controlbarIcon = shiny::icon("cogs"))
+  titleWidth = "450px", controlbarIcon = shiny::icon("cogs"))
 
 # sidebar ====
 sidebar <- dashboardSidebar(
@@ -46,7 +46,7 @@ sidebar <- dashboardSidebar(
   uiOutput("ui_filter"),
   id = "sideBar",
   collapsed = FALSE,
-  width = "350px",
+  width = "450px",
   minified = FALSE
 )
 
