@@ -426,6 +426,7 @@ server <- function(input, output, session){
   
   ## ui details  ===================================================
   output$ui_details <- renderUI({
+    req(center_node())
     if(center_node() %in% phecode$Phecode){
       htmltools::div(tags$a(span(icon("hand-point-right"), "Phecode map to ICD"), 
              href = href(), target = "_blank", style = "color: darkblue"),
