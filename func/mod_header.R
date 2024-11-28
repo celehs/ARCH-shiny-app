@@ -20,7 +20,7 @@ headerUI <- function(id, url_home){
                  width = "100px",
                  style = "padding: 6px 20px 6px 20px;",
                  title = "Home page.", 
-                 onclick =paste0("window.open(url_home, '_blank')")
+                 onclick =paste0("window.open('", url_home, "', '_blank')")
     ),
     downloadButton(ns("downloadData"),
                    " Download",

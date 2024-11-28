@@ -1,6 +1,6 @@
 
 # url for ARCH home page
-url_home: app.parse-health.org/ARCH/
+url_home: https://app.parse-health.org/ARCH/
 
 # url for phecodemap
 url_phe: https://phenomics.va.ornl.gov/phecodemap/
