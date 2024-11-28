@@ -29,6 +29,11 @@ url_phe <- data$url_phe
 uqid_mapping <- data$uqid_mapping
 db <- data$db
 
+
+if(!is.null(uqid_mapping)){
+  df_uqid <- read_csv(uqid_mapping, show_col_types = FALSE)
+}
+
 sapply(dir("func", full.names = TRUE), source)
 load("data/sysdata.rda")
 
@@ -44,6 +49,7 @@ sidebar <- dashboardSidebar(
   sidebarUI("side"),
   hr(),
   uiOutput("ui_filter"),
+  uiOutput("ui_categories"),
   id = "sideBar",
   collapsed = FALSE,
   width = "450px",
@@ -155,7 +161,7 @@ server <- function(input, output, session){
   
   winsize <- windowSizeServer("win")
   
-  headerServer("btn", steps[, -1], "doc/About.md", df_edges_cutted())
+  headerServer("btn", steps[, -1], "doc/About.md", df_plots())
   
   directed = FALSE
   
@@ -204,7 +210,6 @@ server <- function(input, output, session){
       thr_cos <- min
     }
     output$ui_filter <- renderUI({
-      tagList(
         sliderInput(
           inputId = paste0(name_input(), "-filter_cos"),
           label = "Filter nodes by cosine similarity",
@@ -212,17 +217,7 @@ server <- function(input, output, session){
           value = c(thr_cos, max),
           step = 0.01,
           width = "100%"
-        ),
-        shinyWidgets::virtualSelectInput(
-          inputId = paste0(name_input(), "-filter_category"),
-          label = "Filter nodes by category:",
-          choices = categories,
-          selected = as.vector(unlist(categories)),
-          multiple = TRUE,
-          optionsCount = 20,
-          width = "100%"
         )
-      )
     })
   })
   
@@ -238,17 +233,19 @@ server <- function(input, output, session){
     cats
   })
   
-  observeEvent(categories(), {
-    shinyWidgets::updateVirtualSelect(
-      session = session,
-      inputId = paste0(name_input(), "-filter_category"),
-      label = "Filter nodes by category:",
-      choices = categories(),
-      selected = as.vector(unlist(categories()))
-    )
+    output$ui_categories <- renderUI({
+      shinyWidgets::virtualSelectInput(
+        inputId = paste0(name_input(), "-filter_category"),
+        label = "Filter nodes by category:",
+        choices = categories(),
+        selected = as.vector(unlist(categories())),
+        multiple = TRUE,
+        optionsCount = 20,
+        width = "100%"
+      )
   })
   
-  df_edges_cutted <- reactive({
+  df_plots <- reactive({
     req(input[[paste0(name_input(), "-filter_cos")]])
     req(input[[paste0(name_input(), "-filter_category")]])
     # print("df_edges_cutted")
@@ -283,12 +280,6 @@ server <- function(input, output, session){
     clickedNodeText(center_node(), dict.combine)
   })
   
-  ## df plots  ===================================
-  
-  df_plots <- reactive({
-    df_edges_cutted()
-  })
-  
   ## sunburst =======================================
   output$ui_sun <- renderUI({
     if(nrow(df_plots()) > 0){
@@ -301,6 +292,7 @@ server <- function(input, output, session){
   })
   
   output$sun <- plotly::renderPlotly({
+    req(input[[paste0(name_input(), "-filter_category")]])
     print("sunburst")
     sunburstPlotly(center_node(), df_plots(),
                    # input$changeline, input$rotatelabel, input$scale_sungh,
@@ -414,8 +406,7 @@ server <- function(input, output, session){
     req(center_node())
     phe_id <- gsub(".+:", "", center_node(), perl = TRUE)
     href <- paste0(url_phe, "?phecode=", phe_id)
-    if(!is.null(uqid_mapping)){
-      df_uqid <- read_csv(uqid_mapping)
+    if(!is.null(df_uqid)){
       uqid <- df_uqid$uqid[match(phe_id, df_uqid$id)]
       if(isTruthy(uqid)){
         href <- paste0(url_phe, "?uqid=", uqid)

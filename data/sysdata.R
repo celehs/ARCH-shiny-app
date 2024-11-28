@@ -59,5 +59,10 @@ shapes_icons <- c("fa-circle",
   "fa-font", 
   "fa-diamond")
 
+
+categories <- list("Codified" = c("Disease Codified", "Drug Codified", "Lab Codified", "Procedure Codified"),
+                   "NLP" = c("Activities & Behaviors NLP", "Chemicals & Drugs NLP", "Disease NLP", "Drug NLP",
+                             "Lab NLP", "PHYS NLP", "Phenomena NLP", "Procedure NLP"))
+
 save(attrs,colors,ColorsCirc,ColorsNet,phecode,steps,shapes,shapes_icons,
      file = "~/Package/cui-network/data/sysdata.rda")

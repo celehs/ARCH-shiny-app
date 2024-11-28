@@ -151,7 +151,12 @@ sunburstPlotly <- function(node_now, df_edges, dict.combine){
             marker = list(colors = df$color),
             hoverinfo = "label", textinfo = "text", textfont = list(color="black"),
             height =  750) %>%
-      plotly::layout(autosize = F, margin = m, colorway = c('#00C6F2', ''))
+      plotly::layout(margin = m) %>%
+      plotly::config(
+        toImageButtonOptions = list(
+          format = "svg",
+          filename = paste0("sunburst_", paste(node_name, collapse = "_"))
+        ))
 
   }
 }
