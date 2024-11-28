@@ -52,4 +52,4 @@ More information for codified codes (i.e., PheCodes, RxNorm, LOINC codes and Pro
 
 ### References
 
-PheNorm paper
+Yu S, Ma Y, Gronsbell J, Cai T, Ananthakrishnan AN, Gainer VS, Churchill SE, Szolovits P, Murphy SN, Kohane IS, Liao KP, Cai T. Enabling phenotypic big data with PheNorm. J Am Med Inform Assoc. 2018 Jan 1;25(1):54-60. doi: 10.1093/jamia/ocx111. PMID: 29126253; PMCID: PMC6251688.
