@@ -21,13 +21,16 @@ library("readr")
 library("rintrojs")
 library("RPostgres")
 
-library(yaml)
-data <- yaml.load_file("config.yaml")
-print(data)
-url_home <- data$url_home
-url_phe <- data$url_phe
-uqid_mapping <- data$uqid_mapping
-db <- data$db
+url_home <- Sys.getenv("URL_HOME")
+url_phe <- Sys.getenv("URL_Phecode")
+uqid_mapping <- Sys.getenv("UQID_mapping_file")
+db <- list(host = Sys.getenv("DB_host"),
+           port = Sys.getenv("DB_port"),
+           dbname = Sys.getenv("DB_name"),
+           user = Sys.getenv("DB_username"),
+           password = Sys.getenv("DB_password"))
+
+print(db)
 
 
 if(!is.null(uqid_mapping)){
