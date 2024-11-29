@@ -1,4 +1,3 @@
-
 library("data.table")
 library("DBI")
 library("dplyr")
@@ -22,13 +21,13 @@ library("rintrojs")
 library("RPostgres")
 
 url_home <- Sys.getenv("URL_HOME")
-url_phe <- Sys.getenv("URL_Phecode")
-uqid_mapping <- Sys.getenv("UQID_mapping_file")
-db <- list(host = Sys.getenv("DB_host"),
-           port = Sys.getenv("DB_port"),
-           dbname = Sys.getenv("DB_name"),
-           user = Sys.getenv("DB_username"),
-           password = Sys.getenv("DB_password"))
+url_phe <- Sys.getenv("URL_PHECODE")
+uqid_mapping <- Sys.getenv("UQID_MAPPING_FILE")
+db <- list(host = Sys.getenv("DB_HOST"),
+           port = Sys.getenv("DB_PORT"),
+           dbname = Sys.getenv("DB_NAME"),
+           user = Sys.getenv("DB_USERNAME"),
+           password = Sys.getenv("DB_PASSWORD"))
 
 print(db)
 
