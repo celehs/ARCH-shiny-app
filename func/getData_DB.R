@@ -54,8 +54,8 @@ data2db <- function(data, tname, db, title = NA, note = NA){
 
 
 writeTable <- function(data, tname, db){
-  on.exit(RPostgres::dbDisconnect(con(db)), add = TRUE)
   conn <- con(db)
+  on.exit(RPostgres::dbDisconnect(conn), add = TRUE)
   print("write to conn")
   RPostgres::dbWriteTable(conn, tname, data, overwrite = TRUE)
   RPostgres::dbDisconnect(conn)
@@ -87,8 +87,8 @@ con <- function(db){
 }
 
 readDB <- function(sql, tname, db){
-  on.exit(RPostgres::dbDisconnect(con(db)), add = TRUE)
   conn <- con(db)
+  on.exit(RPostgres::dbDisconnect(conn), add = TRUE)
   if(tname %in% RPostgres::dbListTables(conn)){
     RPostgres::dbGetQuery(conn = conn, sql)
   } else {
