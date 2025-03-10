@@ -20,6 +20,7 @@ library("readr")
 library("rintrojs")
 library("RPostgres")
 
+
 url_home <- Sys.getenv("URL_HOME")
 url_phe <- Sys.getenv("URL_PHECODE")
 uqid_mapping <- Sys.getenv("UQID_MAPPING_FILE")
@@ -284,35 +285,35 @@ server <- function(input, output, session){
   
   ## sunburst =======================================
   output$ui_sun <- renderUI({
-    if(nrow(df_plots()) > 0){
-      shinycssloaders::withSpinner(
-        plotly::plotlyOutput("sun",width="auto",
-                             height="750px"), type = 6
-      )} else {
-        ""
-      }
+    req(center_node())
+    shinycssloaders::withSpinner(
+      plotly::plotlyOutput("sun", width="auto",
+                           height="750px"), type = 6
+    )
   })
   
   output$sun <- plotly::renderPlotly({
     req(input[[paste0(name_input(), "-filter_category")]])
+    req(df_plots())
+    if(nrow(df_plots()) == 0) return(NULL)
     print("sunburst")
     sunburstPlotly(center_node(), df_plots(),
-                   # input$changeline, input$rotatelabel, input$scale_sungh,
                    dict.combine)
   })
   
   ## circular plot  =======================================
   
   output$circularplot_codify <- renderUI({
-    if(nrow(df_plots()) > 0){
-      shinycssloaders::withSpinner(
-        plotOutput("circular_codify", width = "100%",
-                   height = paste0(max(700, winsize()[2] - 450),"px")), type = 6
-      )} else {
-        ""
-      }
+    req(center_node())
+    shinycssloaders::withSpinner(
+      plotOutput("circular_codify", width = "100%",
+                 height = paste0(max(700, winsize()[2] - 450),"px")), type = 6
+    )
   })
+  
   output$circular_codify <- renderPlot({
+    req(df_plots())
+    if(nrow(df_plots()) == 0) return(NULL)
     print("circular")
     node_now = center_node()
     circularBar_codify(df_plots(), dict.combine, ColorsCirc)
@@ -320,15 +321,16 @@ server <- function(input, output, session){
   
   
   output$circularplot_nlp <- renderUI({
-    if(nrow(df_plots()) > 0){
-      shinycssloaders::withSpinner(
-        plotOutput("circular_nlp", width = "100%",
-                   height = paste0(max(700, winsize()[2] - 450),"px")), type = 6
-      )} else {
-        ""
-      }
+    req(center_node())
+    shinycssloaders::withSpinner(
+      plotOutput("circular_nlp", width = "100%",
+                 height = paste0(max(700, winsize()[2] - 450),"px")), type = 6
+    )
   })
+  
   output$circular_nlp <- renderPlot({
+    req(df_plots())
+    if(nrow(df_plots()) == 0) return(NULL)
     print("circular")
     node_now = center_node()
     circularBar_nlp(df_plots(), dict.combine, ColorsCirc)
@@ -338,13 +340,13 @@ server <- function(input, output, session){
   # tbClickedServer("tb1", df_plots(), paste0(winsize()[2] - 400,"px"), dict.combine)
   
   output$clicked_node_table <- renderUI({
-    if(nrow(df_plots()) > 0){
-      shinycssloaders::withSpinner(
-        reactable::reactableOutput("tb_clicked_node", width = "100%",
-                                   height = paste0(winsize()[2] - 400,"px")), type = 6
-      )} else {
-        ""
-      }
+    req(center_node())
+    shinycssloaders::withSpinner(
+      reactable::reactableOutput("tb_clicked_node", width = "100%",
+                                 height = paste0(winsize()[2] - 400,"px")), 
+      type = 6,
+      proxy.height = "400px"
+    )
   })
   
   df_clicked_node <- reactive({
@@ -364,8 +366,11 @@ server <- function(input, output, session){
   })
   
   
-  output$tb_clicked_node <- reactable::renderReactable(
-    reactable::reactable({ df_clicked_node() },
+  output$tb_clicked_node <- reactable::renderReactable({
+    req(df_plots())
+    if(nrow(df_plots()) == 0) return(NULL)
+    
+    reactable::reactable(df_clicked_node(),
                          details = function(index) {
                            row_id = df_clicked_node()$connected_nodes[index]
                            if(grepl("^C\\d+$", row_id, perl = TRUE)){
@@ -385,7 +390,6 @@ server <- function(input, output, session){
                            connected_nodes = reactable::colDef(
                              minWidth = 250,
                              name = "connected_nodes / term",
-                             # Show species under character names
                              cell = function(value, index) {
                                term <- df_clicked_node()$term[index]
                                term <- if (!is.na(term)) term else "Unknown"
@@ -402,7 +406,7 @@ server <- function(input, output, session){
                          defaultExpanded = TRUE,
                          pagination = FALSE
     )
-  )
+  })
   
   href <- reactive({
     req(center_node())
@@ -421,7 +425,7 @@ server <- function(input, output, session){
   output$ui_details <- renderUI({
     req(center_node())
     if(center_node() %in% phecode$Phecode){
-      htmltools::div(tags$a(span(icon("hand-point-right"), "Phecode map to ICD"), 
+      htmltools::div(tags$a(span(icon("hand-point-right"), "View in CIPHER"), 
              href = href(), target = "_blank", style = "color: darkblue"),
              style = 'box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
                       margin-top: 20px; padding:30px')
