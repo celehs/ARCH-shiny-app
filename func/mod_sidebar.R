@@ -163,7 +163,7 @@ sidebarServer <- function(id, tb_input, tname, db, type = 1, selected = c(1, 3),
   center_nodes <- eventReactive(input$gobutton, {
     if(input$gobutton == 0 & str_detect(session$clientData$url_search, 'centernode=')){
       url_vars <- session$clientData$url_search
-      str_split(url_vars, 'centernode=')[[1]][2]
+      utils::URLdecode(str_split(url_vars, 'centernode=')[[1]][2])
     }else{
       if(input$gobutton == 0 & !isTruthy(input$tbInput_rows_selected)){
         init_nodes
