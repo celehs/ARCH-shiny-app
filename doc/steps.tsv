@@ -1,6 +1,6 @@
 step	element	intro	position	title
 1	NA	Welcome to the ARCH app.	right	Welcome!
-2	#side-searchbox2	<b>Step 1:  </b> Enter some tearms to search for. e.g. rheumatoid arthritis.	right	Search box
+2	#side-searchbox2	<b>Step 1:  </b> Enter some term to search for. e.g. rheumatoid arthritis.	right	Search box
 3	#side-tbInput	<b>Step 2:  </b> Click to select 1 row in the search results.	right	Input table
 4	#side-check_nodes	<b>Step 3:  </b> Screening selected row for NLP/Codififed nodes.	right	Candidate nodes
 5	#buttons	<b>Step 4:  </b> Submit your selection to the server and show.<br><b>Unselect:  </b>Press this button to clear your selection.	right	Buttons

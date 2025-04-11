@@ -21,7 +21,7 @@ library("rintrojs")
 library("RPostgres")
 
 
-url_home <- Sys.getenv("URL_HOME")
+url_home <- Sys.getenv("URL_FOR_LANDING")
 url_phe <- Sys.getenv("URL_PHECODE")
 uqid_mapping <- Sys.getenv("UQID_MAPPING_FILE")
 db <- list(host = Sys.getenv("DB_HOST"),
