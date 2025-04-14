@@ -24,7 +24,7 @@ getData <- function(id, tname, db, field = "from"){
   if(is.null(id)){
     sql <- paste0('SELECT * FROM "', tname, '";')
   } else {
-    sql <- paste0("SELECT * FROM ", tname, " WHERE \"", field, "\" = '", id, "';")
+    sql <- paste0('SELECT * FROM "', tname, '" WHERE "', field, '" = \'', id, '\';')
   }
   readDB(sql, tname, db)
 }
@@ -33,10 +33,21 @@ getData <- function(id, tname, db, field = "from"){
 #' @rdname getData
 #' @export
 data2db <- function(data, tname, db, title = NA, note = NA){
+  if(!is.data.frame(data)) {
+    stop("Input 'data' must be a data.frame")
+  }
+  
+  if(is.null(tname) || !is.character(tname)) {
+    stop("Table name must be a non-null character string")
+  }
+  
   cat("Database: ", db$dbname, "\n")
   cat("Table: ", tname, "\n")
   if(!tname %in% c("df_edges", "dict")) {
-    if(!"details" %in% RPostgres::dbListTables(con(db))){
+    conn <- con(db)
+    on.exit(RPostgres::dbDisconnect(conn), add = TRUE)
+    
+    if(!"details" %in% RPostgres::dbListTables(conn)){
       details <- data.frame(tname = tname, title = title, note = note)
     } else {
       details <- getData(NULL, "details", db)
@@ -54,45 +65,55 @@ data2db <- function(data, tname, db, title = NA, note = NA){
 
 
 writeTable <- function(data, tname, db){
+  if(nrow(data) == 0) {
+    warning("Writing empty data frame to database")
+  }
+  
   conn <- con(db)
   on.exit(RPostgres::dbDisconnect(conn), add = TRUE)
-  print("write to conn")
-  RPostgres::dbWriteTable(conn, tname, data, overwrite = TRUE)
-  RPostgres::dbDisconnect(conn)
-  print("Done!")
-}
-
-
-getDetailsFromDB <- function(db, id){
-  details <- getData(NULL, "details", db)
-  for(t in details$tname){
-    getData(id, t, db)
-  }
+  
+  message("Writing to database...")
+  tryCatch({
+    RPostgres::dbWriteTable(conn, tname, data, overwrite = TRUE)
+    message("Data successfully written to table: ", tname)
+  }, error = function(e) {
+    stop("Failed to write to database: ", e$message)
+  })
 }
 
 con <- function(db){
-  DBI::dbConnect(
-    drv = RPostgres::Postgres(),
-    dbname = db$dbname,
-    # host = Sys.getenv("DB_HOST"),
-    host = db$host,
-    # port = as.numeric(Sys.getenv("DB_PORT")),
-    port = db$port,
-    # user = Sys.getenv("DB_USER"),
-    user = db$user,
-    # password = Sys.getenv("DB_PSWD")
-    password = db$password
-    # password = rstudioapi::askForPassword("Database password")
-  )
+  tryCatch({
+    DBI::dbConnect(
+      drv = RPostgres::Postgres(),
+      dbname = db$dbname,
+      # host = Sys.getenv("DB_HOST"),
+      host = db$host,
+      # port = as.numeric(Sys.getenv("DB_PORT")),
+      port = db$port,
+      # user = Sys.getenv("DB_USER"),
+      user = db$user,
+      # password = Sys.getenv("DB_PSWD")
+      password = db$password
+      # password = rstudioapi::askForPassword("Database password")
+    )
+  }, error = function(e) {
+    stop("Failed to connect to database: ", e$message)
+  })
 }
 
 readDB <- function(sql, tname, db){
   conn <- con(db)
   on.exit(RPostgres::dbDisconnect(conn), add = TRUE)
+  
   if(tname %in% RPostgres::dbListTables(conn)){
-    RPostgres::dbGetQuery(conn = conn, sql)
+    tryCatch({
+      RPostgres::dbGetQuery(conn = conn, sql)
+    }, error = function(e) {
+      warning("Query failed: ", e$message)
+      NULL
+    })
   } else {
-    print(paste0(tname, " is't in the database!"))
+    warning(paste0("Table '", tname, "' doesn't exist in the database!"))
     NULL
   }
 }
