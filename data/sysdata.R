@@ -1,6 +1,6 @@
-load("~/Package/cui-network/data/sysdata.rda")
+load("sysdata.rda")
 
-steps <- read_tsv("~/Package/cui-network/doc/steps.tsv")
+steps <- readr::read_tsv("../doc/steps.tsv")
 steps <- steps[-c(4, 12), ]
 steps$intro[4] <- gsub("Step 4", "Step 3", steps$intro[4])
 
@@ -65,4 +65,4 @@ categories <- list("Codified" = c("Disease Codified", "Drug Codified", "Lab Codi
                              "Lab NLP", "PHYS NLP", "Phenomena NLP", "Procedure NLP"))
 
 save(attrs,colors,ColorsCirc,ColorsNet,phecode,steps,shapes,shapes_icons,
-     file = "~/Package/cui-network/data/sysdata.rda")
+     file = "sysdata.rda")

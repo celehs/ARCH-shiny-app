@@ -3,10 +3,7 @@ library("DBI")
 library("dplyr")
 library("DT")
 library("ggplot2")
-# library("htmltools")
 library("igraph")
-# library("shiny")
-# library("shinyBS")
 library("shinycssloaders")
 library("shinydashboard")
 library("shinydashboardPlus")
@@ -15,8 +12,7 @@ library("shinyWidgets")
 library("stringr")
 library("plotly")
 library("reactable")
-library("readr")
-# library("reshape2")
+# library("readr")
 library("rintrojs")
 library("RPostgres")
 
@@ -34,7 +30,7 @@ print(db)
 
 
 if(!is.null(uqid_mapping)){
-  df_uqid <- read_csv(uqid_mapping, show_col_types = FALSE)
+  df_uqid <- readr::read_csv(uqid_mapping, show_col_types = FALSE)
 }
 
 sapply(dir("func", full.names = TRUE), source)
@@ -122,11 +118,11 @@ server <- function(input, output, session){
   dict.combine <- getData(NULL, "dict", db)
   dict.combine <- dict.combine[, !colnames(dict.combine) %in% c("term_s", "stype_s")]
   dict.combine$idforCCSlabel = dict.combine$id
-  ccs_map = read.csv('data/CUI_CCS_UMLS2021AA_VID.csv') %>% filter(str_detect(CCS, '^[0-9]'))
+  ccs_map = readr::read_csv('data/CUI_CCS_UMLS2021AA_VID.csv') %>% filter(str_detect(CCS, '^[0-9]'))
   ccs_map$CCS_num = ccs_map$CCS
   ccs_map$CCS = paste0('CCS:', ccs_map$CCS)
   ccs_map$CCS_id = paste0('ProcedureCode:', 1:nrow(ccs_map))
-  ccs_map_2 = read.csv('data/no_match_cui_ccs_final.csv')
+  ccs_map_2 = readr::read_csv('data/no_match_cui_ccs_final.csv')
   
   dict.combine.ccs = dict.combine[str_detect(dict.combine$id, '^CCS\\:'), ]
   dict.combine.ccs$label[dict.combine.ccs$id %in% ccs_map$CCS] =
