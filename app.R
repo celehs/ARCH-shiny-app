@@ -24,7 +24,10 @@ db <- list(host = Sys.getenv("DB_HOST"),
            port = Sys.getenv("DB_PORT"),
            dbname = Sys.getenv("DB_NAME"),
            user = Sys.getenv("DB_USERNAME"),
-           password = Sys.getenv("DB_PASSWORD"))
+           password = Sys.getenv("DB_PASSWORD"),
+           minSize = Sys.getenv("minSize"),
+           maxSize = Sys.getenv("maxSize"),
+           idleTimeout = Sys.getenv("idleTimeout"))
 
 print(db)
 
@@ -420,7 +423,7 @@ server <- function(input, output, session){
   ## ui details  ===================================================
   output$ui_details <- renderUI({
     req(center_node())
-    if(center_node() %in% phecode$Phecode){
+    if(center_node() %in% df_uqid$id){
       htmltools::div(tags$a(span(icon("hand-point-right"), "View in CIPHER"), 
              href = href(), target = "_blank", style = "color: darkblue"),
              style = 'box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
